@@ -1,5 +1,5 @@
 # ProyectoPortfolioArtistico
-Mi primer proyecto creado con Bootstrap, CSS y Js.
+Mi primer proyecto creado con Bootstrap, CSS y Js realizado en el 2021.
 
 Objetivo: Crear una página web para mi hermano Jorge Iasich el cual es artista plástico.
 
