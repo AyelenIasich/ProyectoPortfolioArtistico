@@ -1,0 +1,392 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  background: black;
+}
+/* barra de navegacion en formato web */
+.mynav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  padding: 0px 0;
+  align-items: center;
+  /* background: #000; */
+  color: #fff;
+  opacity: 0.8;
+}
+/* menu con la lista de los links */
+nav .mainMenu {
+  display: flex;
+  /* con esto le saco los puntito que tiene la lista */
+  list-style: none;
+  margin-bottom: 0;
+}
+
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Efecto al pasar el mouse sobre el link se pone el background del color elegido */
+nav .mainMenu li a:hover {
+  background: #009688;
+  opacity: 0.5;
+}
+#container {
+  transform: scale(0.7);
+}
+/* icono del menu cuando es responsive */
+nav .openMenu {
+  display: none;
+}
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+
+.menu-btn_burger {
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn_burger::after {
+  transform: translateY(16px);
+}
+
+nav .mainMenu .closeMenu,
+.icons a {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(225, 0, 191);
+}
+.fa-github:hover {
+  color: rgb(255, 123, 0);
+}
+
+nav .logo {
+  margin: 6px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+ul {
+  padding: 0;
+}
+@media (max-width: 1000px) {
+  /* estilo del menu abierto */
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: top 1s ease;
+    display: none;
+  }
+
+  /* con esto aperecfe el icono de cerrar menu en responsive */
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* esto hace que aparecta el icono del menu en responsive */
+  nav .openMenu {
+    display: block;
+  }
+
+  /* este efecto hace que las letras crezcan y cambien de color al ser apretadas */
+  nav .mainMenu li a:hover {
+    background: none;
+    color: #009688;
+    font-size: 1.6rem;
+  }
+  /* posicion de los iconos redes sociales y se le saca las decoraciones  */
+  .icons a {
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+  }
+}
+
+/* efecto carousel en la web */
+.carousel-item h1 {
+  font-size: 6rem;
+}
+.carousel-item p {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.carousel-item img {
+  aspect-ratio: 16/9;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* estilos del efecto  carousel en mobile */
+  .container h1 {
+    text-align: center;
+  }
+  .container p {
+    text-align: center;
+  }
+  .boton {
+    left: 17%;
+  }
+  /*le saco el padding al mainmenu open en mobile que le agrega boostrap  */
+  ul {
+    padding-left: 0;
+  }
+
+  /* .carousel-fade .carousel-item,  */
+  /* estilos de las imagenes en el efecto carousel */
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    margin-top: 65%;
+  }
+  .carousel-item h1 {
+    font-size: 3rem;
+  }
+  .carousel-item p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.carousel-item {
+  height: 100vh;
+  /* background-color:black; */
+  color: #fff;
+  position: relative;
+  
+}
+
+/* esto contiene el mensaje h1 y p */
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
+/* esto solo lo necesito si quiero poner un gradient o cambiar la opacity de la imagen */
+.overlay-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+}
+
+/* boton raro que hice  */
+
+.boton {
+  width: 200px;
+  padding: 12px 0;
+  text-align: center;
+  margin: 10px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tr {
+  background: #009688;
+  height: 100%;
+  width: 0%;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.boton:hover .tr {
+  width: 100%;
+}
+.boton:hover {
+  border: none;
+}
+
+/* efecto de sobreado azul sobre los links */
+.galeria-cuadros {
+  background-color: #000;
+  height: 10000px;
+  width: 100%;
+}
+
+
+.main {
+  background-color: #000;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.main .galeria {
+  position: relative;
+  height: auto;
+  width: 90%;
+  margin: auto;
+ 
+  padding: 45px 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2vh;
+  grid-auto-rows: dense;
+}
+.main .galeria .imagenes {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(36, 35, 35, 0.9);
+  border-radius: 2px;
+}
+
+.main .galeria .imagenes:first-child {
+  grid-column-start: span 2;
+  grid-row-start: span 3;
+}
+.main .galeria .imagenes:nth-child(2n + 3) {
+  grid-row-start: span 2;
+}
+.main .galeria .imagenes:nth-child(4n + 5) {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.main .galeria .imagenes:nth-child(6n + 7) {
+  grid-row-start: span 1;
+}
+.main .galeria .imagenes:nth-child(8n + 9) {
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
+
+.main .galeria .imagenes img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5) grayscale(100);
+  transition: 0.3s ease-in-out;
+}
+.main .galeria .imagenes:hover img {
+  filter: brightness(1) grayscale(0);
+}
+
+@media only screen and (max-width: 768px) {
+  .main .galeria {
+    display: block;
+  }
+  .main .galeria .imagenes {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 2% 0 ;
+  }
+  .main .galeria .imagenes img {
+    display: block;
+    filter: brightness(1) grayscale(0);
+  }
+}
+
+.section-galeria{
+  height: 600px;
+  width: 100%;
+}
+
+.banner-galeria{
+ 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+ 
+}
+.section-galeria .banner-galeria img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  
+}
+
+.color-overlay {
+  background: linear-gradient(to top right, #000000bf, #000000bf);
+  width: 100%;
+  height: 100vh;
+  opacity: 0.7;
+  position: absolute;
+
+}
+
+.banner-text{
+  margin-left: 85px;
+  margin-bottom: 200px;
+  z-index: 1;
+  color: #fff;
+}
